@@ -16,7 +16,8 @@
 	
 	<%-- 
 	jsp 주석
-	페이지 소스 보기에서 볼 수 없음 
+	페이지 소스 보기에서 볼 수 없음
+	단축키 : ctrl+ shift + / 
 	 --%>
 	<script type="text/javascript">
 	
