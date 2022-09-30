@@ -1,15 +1,20 @@
 package jsp20220923.chapter07;
 
 public class Person {
-	//읽고 쓸 수 있는
-	//name, age 프로퍼티 작성
+	// 읽고 쓸 수 있는
+	// name, age 프로퍼티 작성
+
 	private String name;
 	private Integer age;
+	private boolean alive;
 	
-	public Person() {
-		
+	public boolean isAlive() { // boolean type 읽기 프로퍼티의 메소드는 is로 시작
+		return alive;
 	}
-
+	
+	public void setAlive(boolean alive) {
+		this.alive = alive;
+	}
 
 	public String getName() {
 		return name;
@@ -26,5 +31,5 @@ public class Person {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	
+
 }
