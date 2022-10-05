@@ -23,6 +23,11 @@ public class Car {
 	public Car() {
 		
 	}
+	
+	public Car(String model, Integer price) {
+		this.model=model;
+		this.price=price;
+	}
 	// 읽을 수 있는 company 프로퍼티 결정 
 	public String getCompany() {
 		return "현대";
