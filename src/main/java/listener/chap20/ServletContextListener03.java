@@ -10,12 +10,12 @@ import javax.servlet.annotation.WebListener;
  *
  */
 /* @WebListener */
-public class ServleteContextListener03 implements ServletContextListener {
+public class ServletContextListener03 implements ServletContextListener {
 
     /**
      * Default constructor. 
      */
-    public ServleteContextListener03() {
+    public ServletContextListener03() {
         // TODO Auto-generated constructor stub
     }
 
