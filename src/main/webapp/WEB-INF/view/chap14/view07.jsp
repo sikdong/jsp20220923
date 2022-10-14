@@ -25,7 +25,9 @@
 	</form> -->
 	
 
-	<h2>고객 리스트</h2>
+	<h2>고객 리스트</h2> 
+	<a href="${pageContext.request.contextPath}/Servlet28 ">새 고객 등록하러 가기</a> 
+	<h4>${sessionScope.message}</h4>
 	<table class="table">
 		<thead>
 			<tr>
@@ -34,16 +36,27 @@
 				<th>ID</th>
 				<th>이름</th>
 				<th>주소</th>
+				<th>컨택트 네임</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${customers }" var="customer">
 				<tr>
+					<td>${customer.id }</td>
+					<td>
+					<c:url value="/Servlet30" var="updateUrl">
+							<c:param name="id" value="${customer.id }" />
+						</c:url>
+					
+						<a href="${updateUrl }">
+							${customer.name }
+						</a>
+					</td>
+					
 					<td>${customer.city }</td>
 					<td>${customer.country }</td>
-					<td>${customer.name }</td>
 					<td>${customer.address }</td>
-					<td>${customer.id }</td>
+					<td>${customer.contactName }</td>
 				</tr>
 			</c:forEach>
 		</tbody>

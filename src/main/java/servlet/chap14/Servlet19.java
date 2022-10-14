@@ -35,7 +35,7 @@ public class Servlet19 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String sql = "SELECT CustomerID, CustomerName, Address, City, Country "
+		String sql = "SELECT CustomerID, CustomerName, Address, City, Country, ContactName "
 				+ "FROM Customers";
 		ServletContext application = request.getServletContext();
 		String url = application.getAttribute("jdbc.url").toString();
@@ -59,6 +59,7 @@ public class Servlet19 extends HttpServlet {
 				ct.setName(rs.getString(2));
 				/* ct.setName(rs.getString("CustomerName")); 도 가능 */
 				ct.setAddress(rs.getString(3));
+				ct.setContactName(rs.getString("ContactName"));
 				
 				list.add(ct);
 			}

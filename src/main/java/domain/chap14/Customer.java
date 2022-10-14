@@ -6,6 +6,13 @@ public class Customer {
 	private int id;
 	private String city;
 	private String country;
+	private String contactName;
+	public String getContactName() {
+		return contactName;
+	}
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
+	}
 	public int getId() {
 		return id;
 	}
@@ -36,6 +43,7 @@ public class Customer {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
 	
 	
 }

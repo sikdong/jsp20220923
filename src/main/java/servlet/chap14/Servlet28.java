@@ -50,9 +50,10 @@ public class Servlet28 extends HttpServlet {
 		String country = request.getParameter("Country");
 		String idstr = request.getParameter("CustomerId");
 		int id = Integer.parseInt(idstr);
+		String contactName = request.getParameter("ContactName");
 
-		String sql = "INSERT INTO Customers (CustomerName, Address, City, Country, CustomerID) "
-				+ "VALUES (?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO Customers (CustomerName, Address, City, Country, CustomerID, ContactName) "
+				+ "VALUES (?, ?, ?, ?, ?, ?)";
 		ServletContext application = request.getServletContext();
 		String url = application.getAttribute("jdbc.url").toString();
 		String user = application.getAttribute("jdbc.username").toString();
@@ -66,6 +67,7 @@ public class Servlet28 extends HttpServlet {
 			pstmt.setString(3, city);
 			pstmt.setString(4, country);
 			pstmt.setInt(5, id);
+			pstmt.setString(6, contactName);
 
 			int cnt = pstmt.executeUpdate();
 			if (cnt == 1) {
